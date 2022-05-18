@@ -1,0 +1,46 @@
+{
+	"name": "nodejs-typescript",
+	"version": "1.0.0",
+	"description": "Node js with typescript",
+	"main": "index.js",
+	"scripts": {
+		"tsc": "tsc",
+		"lint": "tsc -b && eslint src --ext ts",
+		"test": "tsc -b && jest --coverage --detectOpenHandles",
+		"test:unit": "ENV_FILE=./test/.env.test jest",
+		"dev": "tsc -b && nodemon ./src/index.ts",
+		"start": "tsc -b && eslint src --ext ts && jest --coverage && nodemon ./src/index.ts",
+		"start:prod": "tsc -b && node dist/"
+	},
+	"author": "Bala",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/jest": "^27.5.0",
+		"@types/node": "^17.0.31",
+		"@types/supertest": "^2.0.12",
+		"@typescript-eslint/eslint-plugin": "^5.23.0",
+		"jest": "^28.1.0",
+		"nodemon": "^2.0.16",
+		"supertest": "^6.2.3",
+		"ts-jest": "^28.0.2",
+		"ts-node": "^10.7.0",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"@types/cors": "^2.8.12",
+		"@types/morgan": "^1.9.3",
+		"@types/pg": "^8.6.5",
+		"@typescript-eslint/parser": "^5.23.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"helmet": "^5.0.2",
+		"joi": "^17.6.0",
+		"morgan": "^1.10.0",
+		"pg": "^8.7.3",
+		"pg-hstore": "^2.3.4",
+		"redis": "^4.1.0",
+		"sequelize": "^6.19.0"
+	}
+}
